@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introduction to Python</title>
+
+		<link rel="stylesheet" href="revealjs/css/reveal.css">
+		<link rel="stylesheet" href="revealjs/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'revealjs/css/print/pdf.css' : 'revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+          <h1>Introduction to Python</h1>
+          <h3>Event name?</h3>
+          <p>September 22, 2017</p>
+          <p>
+            <small>David Naughton - UMN Libraries Web Development</small>
+            <small>David Olsen - CLA LATIS</small>
+          </p>
+          <p>
+            <small><a href="mailto:naughton@umn.edu">naughton@umn.edu</a></small>
+            <small><a href="mailto:naughton@umn.edu">dolsen@umn.edu</a></small>
+          </p>
+        </section>
+
+				<section>
+          <h1>Why Python?</h1>
+				</section>
+
+				<section>
+          <h1>REPL</h1>
+          <p>READ-EVAL-PRINT LOOP</p>
+					<pre class="fragment"><code data-noescape class="bash">
+$ python
+					</code></pre>
+					<pre class="fragment">
+Python 3.5.2 (default, Dec 20 2016, 10:24:54) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+					</pre>
+				</section>
+
+				<section>
+          <h1>Jupyter Notebooks</h1>
+          <p class="fragment"><a href="https://nb.latis.umn.edu/">nb.latis.umn.edu</a></p>
+				</section>
+
+				<section>
+          <h1>Python 2 vs. 3</h1>  
+				</section>
+
+				<section>
+          <h1>Hello, World!</h1>
+					<pre class="fragment"><code data-noescape class="python">
+print('Hello, World!')
+					</code></pre>
+				</section>
+
+				<section>
+          <h1>Variables</h1>  
+					<pre class="fragment"><code data-noescape class="python">
+to = 'World'
+print('Hello, {}!'.format(to))
+					</code></pre>
+				</section>
+
+				<section>
+          <h1>Functions</h1>  
+					<pre class="fragment"><code data-noescape class="python">
+def hello(to):
+  return 'Hello, {}!'.format(to)
+					</code></pre>
+					<pre class="fragment"><code data-noescape class="python">
+msg = hello('World')
+print(hello(msg))
+					</code></pre>
+				</section>
+
+				<section>
+          <h1>Modules &amp; Namespaces</h1>  
+          <p class="fragment">In file <strong>hello.py</strong>:</p>
+					<pre class="fragment"><code data-noescape class="python">
+def msg(to):
+  return 'Hello, {}!'.format(to)
+					</code></pre>
+          <p class="fragment">In file <strong>goodbye.py</strong>:</p>
+					<pre class="fragment"><code data-noescape class="python">
+def msg(to):
+  return 'Goodbye, {}!'.format(to)
+					</code></pre>
+				</section>
+
+				<section>
+          <h1>Packages</h1>  
+          <p class="fragment"><a href="https://github.com/UMNLibraries/pureapi">github.com/UMNLibraries/pureapi</a></p>
+					<pre class="fragment"><code data-noescape class="bash">
+!pip install --user git+https://github.com/UMNLibraries/pureapi.git
+					</code></pre>
+					<pre class="fragment"><code data-noescape class="python">
+import pureapi
+					</code></pre>
+				</section>
+
+				<section>
+          <h1>github.umn.edu</h1>  
+				</section>
+
+				<section>
+          <h1>Code Reuse</h1>  
+				</section>
+
+				<section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="revealjs/lib/js/head.min.js"></script>
+		<script src="revealjs/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'revealjs/plugin/markdown/marked.js' },
+					{ src: 'revealjs/plugin/markdown/markdown.js' },
+					{ src: 'revealjs/plugin/notes/notes.js', async: true },
+					{ src: 'revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
